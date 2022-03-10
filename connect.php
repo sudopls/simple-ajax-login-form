@@ -42,3 +42,10 @@ $pdo = new PDO(
 );
 
 //The PDO object can now be used to query MySQL.
+
+/**
+*   Create database "newblog" if it doesn't exists
+*/
+
+$createDb = $pdo->query("CREATE DATABASE IF NOT EXISTS " . MYSQL_DATABASE);
+
